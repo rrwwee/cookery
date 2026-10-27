@@ -13,19 +13,31 @@
     "com.openai": {
       "interface": {
         "displayName": "Cookery",
-        "shortDescription": "Cook by voice with a ceiling camera and visual guidance",
-        "longDescription": "A macOS cooking companion using your iPhone's QuickTime preview. A small shell script saves a fresh picture every second; Codex checks the latest picture when you ask and shows useful food references inline.",
+        "shortDescription": "Hands-free cooking guidance",
+        "longDescription": "Cook with Codex Voice while an iPhone overlooks your kitchen. Cookery uses QuickTime on your Mac to save a camera image about once per second. Codex can inspect recent images, guide recipe steps, answer cooking questions, and display visual references. Requires a Mac, Codex, a compatible iPhone camera connection, and permission to capture the QuickTime window. Images are reviewed during the conversation; Cookery does not provide continuous supervision or measure food temperature. You control when capture stops and whether the saved images are deleted.",
         "category": "Productivity",
         "capabilities": [
           "Read",
           "Write"
         ],
         "defaultPrompt": [
-          "Set up my hands-free kitchen camera.",
-          "Let's cook. Check the latest camera picture when I ask and show me visual references when useful."
-        ]
+          "Let's cook. Set up my top-down kitchen camera and help me make dinner.",
+          "Check my cooking progress and show me how the next step should look."
+        ],
+        "developerName": "Rory Collins",
+        "websiteURL": "https://github.com/rrwwee/cookery",
+        "supportURL": "https://github.com/rrwwee/cookery/issues",
+        "privacyPolicyURL": "https://github.com/rrwwee/cookery/blob/main/PRIVACY.md",
+        "logo": "./assets/icon.svg",
+        "composerIcon": "./assets/icon.svg"
       },
       "requires_local_executor": true
     }
-  }
+  },
+  "author": {
+    "name": "Rory Collins",
+    "url": "https://github.com/rrwwee"
+  },
+  "homepage": "https://github.com/rrwwee/cookery",
+  "repository": "https://github.com/rrwwee/cookery"
 }
