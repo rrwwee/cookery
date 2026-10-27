@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+dist/
+
+# Keep camera captures and local secrets out of Git.
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.mov
+*.mp4
+.env
+.env.*

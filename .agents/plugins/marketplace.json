@@ -1,0 +1,20 @@
+{
+  "name": "cookery",
+  "interface": {
+    "displayName": "Cookery"
+  },
+  "plugins": [
+    {
+      "name": "cookery",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cookery"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

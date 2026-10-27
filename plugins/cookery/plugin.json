@@ -1,0 +1,31 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cookery",
+  "version": "0.1.0",
+  "description": "Hands-free cooking in Codex voice with a five-second camera folder and inline visual references.",
+  "keywords": [
+    "cooking",
+    "voice",
+    "camera",
+    "macos"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Cookery",
+        "shortDescription": "Cook by voice with a ceiling camera and visual guidance",
+        "longDescription": "A macOS cooking companion using your iPhone's QuickTime preview. A small shell script saves a fresh picture every five seconds; Codex checks the latest picture when you ask and shows useful food references inline.",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "Set up my hands-free kitchen camera.",
+          "Let's cook. Check the latest camera picture when I ask and show me visual references when useful."
+        ]
+      },
+      "requires_local_executor": true
+    }
+  }
+}
