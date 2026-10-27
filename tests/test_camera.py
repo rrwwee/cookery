@@ -21,13 +21,15 @@ class CameraTests(unittest.TestCase):
             folder = root/'pictures with spaces'
             process = subprocess.Popen(['/bin/sh', str(SCRIPT), str(folder)], env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             try:
-                deadline = time.monotonic()+8
+                deadline = time.monotonic()+4
                 while len(list(folder.glob('[0-9]*.jpg'))) < 2 and time.monotonic() < deadline:
                     time.sleep(.05)
                 frames = sorted(folder.glob('[0-9]*.jpg'))
                 self.assertEqual(len(frames), 2)
                 self.assertEqual((folder/'latest.jpg').read_bytes(), b'test picture')
-                self.assertGreaterEqual(frames[1].stat().st_mtime-frames[0].stat().st_mtime, 4.5)
+                interval = frames[1].stat().st_mtime-frames[0].stat().st_mtime
+                self.assertGreaterEqual(interval, 0.9)
+                self.assertLess(interval, 3)
             finally:
                 process.terminate(); process.communicate(timeout=7)
 

@@ -16,11 +16,11 @@ String(camera[0].kCGWindowNumber);
 JXA
 )
 
-echo "Saving pictures to $folder every five seconds. Stop with Ctrl+C."
+echo "Saving pictures to $folder every second. Stop with Ctrl+C."
 while true; do
   picture="$folder/$(date -u +%Y%m%dT%H%M%SZ).jpg"
   screencapture -x -o -l "$window_id" -t jpg "$picture"
   cp "$picture" "$folder/.latest.jpg"
   mv -f "$folder/.latest.jpg" "$folder/latest.jpg"
-  sleep 5
+  sleep 1
 done

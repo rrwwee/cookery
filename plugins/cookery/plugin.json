@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cookery",
   "version": "0.1.0",
-  "description": "Hands-free cooking in Codex voice with a five-second camera folder and inline visual references.",
+  "description": "Hands-free cooking in Codex voice with a one-second camera folder and inline visual references.",
   "keywords": [
     "cooking",
     "voice",
@@ -14,7 +14,7 @@
       "interface": {
         "displayName": "Cookery",
         "shortDescription": "Cook by voice with a ceiling camera and visual guidance",
-        "longDescription": "A macOS cooking companion using your iPhone's QuickTime preview. A small shell script saves a fresh picture every five seconds; Codex checks the latest picture when you ask and shows useful food references inline.",
+        "longDescription": "A macOS cooking companion using your iPhone's QuickTime preview. A small shell script saves a fresh picture every second; Codex checks the latest picture when you ask and shows useful food references inline.",
         "category": "Productivity",
         "capabilities": [
           "Read",
